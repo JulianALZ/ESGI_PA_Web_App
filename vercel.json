@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "src/routes/**/*.svelte",
-      "use": "@vercel/svelte"
+      "use": "@sveltejs/adapter-vercel"
     },
     {
       "src": "server/server.js",
