@@ -7,6 +7,11 @@
     {
       "src": "/login",
       "dest": "/src/routes/login/+page.svelte"
+
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/.vercel/output/static/$1"
     },
     {
       "src": "/signup",
