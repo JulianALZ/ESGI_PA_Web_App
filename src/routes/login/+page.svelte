@@ -15,7 +15,7 @@
 			const password = document.getElementById('typePasswordX').value;
 
 			try {
-				const response = await fetch('http://localhost:3000/login', {
+				const response = await fetch('https://esgi-pa-web-app-back.vercel.app/api/login', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json'

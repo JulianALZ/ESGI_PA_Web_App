@@ -8,7 +8,7 @@
 
 		try {
 			if(password === password2){
-				const response = await fetch('http://localhost:3000/register', {
+				const response = await fetch('https://esgi-pa-web-app-back.vercel.app/api/register', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json'

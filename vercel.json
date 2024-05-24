@@ -1,20 +1,9 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "src/routes/**/*.svelte",
-      "use": "@sveltejs/adapter-vercel"
-    },
-    {
-      "src": "server/server.js",
-      "use": "@vercel/node"
-    }
+    { "src": "package.json", "use": "@vercel/static-build" }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/server/server.js"
-    },
     {
       "src": "/login",
       "dest": "/src/routes/login/+page.svelte"
@@ -37,3 +26,4 @@
     }
   ]
 }
+
