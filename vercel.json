@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/routes/**/*.svelte",
+      "use": "@vercel/svelte"
+    },
+    {
+      "src": "server/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server/server.js"
+    },
+    {
+      "src": "/login",
+      "dest": "/src/routes/login/+page.svelte"
+    },
+    {
+      "src": "/signup",
+      "dest": "/src/routes/signup/+page.svelte"
+    },
+    {
+      "src": "/homepage",
+      "dest": "/src/routes/homepage/+page.svelte"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/src/routes/$1/+page.svelte"
+    },
+    {
+      "src": "/",
+      "dest": "/src/routes/+page.svelte"
+    }
+  ]
+}
