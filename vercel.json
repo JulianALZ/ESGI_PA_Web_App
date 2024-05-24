@@ -4,31 +4,6 @@
     { "src": "package.json", "use": "@vercel/static-build" }
   ],
   "routes": [
-    {
-      "src": "/login",
-      "dest": "/src/routes/login/+page.svelte"
-
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/.vercel/output/static/$1"
-    },
-    {
-      "src": "/signup",
-      "dest": "/src/routes/signup/+page.svelte"
-    },
-    {
-      "src": "/homepage",
-      "dest": "/src/routes/homepage/+page.svelte"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/src/routes/$1/+page.svelte"
-    },
-    {
-      "src": "/",
-      "dest": "/src/routes/+page.svelte"
-    }
+    { "src": "/(.*)", "dest": "/.vercel/output/static/$1" }
   ]
 }
-
